@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de PTD</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulário Geração de PTD</h2>
+        <form id="courseForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="label-container">
+                        <div class="tooltip">
+                            <img src="assets/information.png" alt="Informação" class="info-icon">
+                            <span class="tooltip-text">Digite o nome do curso conforme plano de curso</span>
+                        </div>
+                        <label for="course">Curso:</label>
+                    </div>
+                    <input type="text" id="course" name="course" placeholder="Informe o nome do curso..." required>
+                </div>
+                <div class="form-group">
+                    <div class="label-container">
+                        <div class="tooltip">
+                            <img src="assets/information.png" alt="Informação" class="info-icon">
+                            <span class="tooltip-text">Digite a carga horária do curso conforme plano de curso</span>
+                        </div>
+                        <label for="workload">Carga Horária do Curso:</label>
+                    </div>
+                    <input type="number" id="workload" name="workload" placeholder="Informe a carga horária do curso..." min="1" max="100" required>
+                </div>
+                <div class="form-group">
+                    <div class="label-container">
+                        <div class="tooltip">
+                            <img src="assets/information.png" alt="Informação" class="info-icon">
+                            <span class="tooltip-text">Digite o eixo tecnológico ou segmento conforme plano de curso</span>
+                        </div>
+                        <label for="eixo">Eixo/Segmento:</label>
+                    </div>
+                    <input type="text" id="eixo" name="eixo" placeholder="Informe o eixo/segmento..." required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="label-container">
+                        <div class="tooltip">
+                            <img src="assets/information.png" alt="Informação" class="info-icon">
+                            <span class="tooltip-text">Digite o tipo de curso conforme plano de curso</span>
+                        </div>
+                        <label for="tipo">Tipo de Curso:</label>
+                    </div>
+                    <input type="text" id="tipo" name="tipo" placeholder="Informe o tipo de curso..." required>
+                </div>
+                <div class="form-group">
+                    <div class="label-container">
+                        <div class="tooltip">
+                            <img src="assets/information.png" alt="Informação" class="info-icon">
+                            <span class="tooltip-text">Digite o nome da unidade curricular conforme plano de curso</span>
+                        </div>
+                        <label for="uc">UC:</label>
+                    </div>
+                    <input type="text" id="uc" name="uc" placeholder="Informe o nome/código da UC" required>
+                </div>
+                <div class="form-group">
+                    <div class="label-container">
+                        <div class="tooltip">
+                            <img src="assets/information.png" alt="Informação" class="info-icon">
+                            <span class="tooltip-text">Digite a carga horária da unidade curricular conforme plano de curso</span>
+                        </div>
+                        <label for="ch">Carga Horária da UC:</label>
+                    </div>
+                    <input type="number" id="ch" name="ch" placeholder="Informe a carga horaria da unidade curricular..." min="1" max="5000" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group" style="flex: 1;">
+                    <div class="label-container">
+                        <div class="tooltip">
+                            <img src="assets/information.png" alt="Informação" class="info-icon">
+                            <span class="tooltip-text">Digite quantas situações de aprendizagem serão registradas no seu PTD</span>
+                        </div>
+                        <label for="situAprendizagem">Quantidade de Situações de Aprendizagem:</label>
+                    </div>
+                    <input type="number" id="situAprendizagem" name="situAprendizagem" placeholder="Informe quantas situações de aprendizagem serão registradas no PTD..." required>
+                </div>
+            </div>
+            <button type="submit">Avançar</button>
+        </form>
+    </div>
+</body>
+</html>
